@@ -63,7 +63,7 @@
                                      <td>{{ $key += 1 }}</td>
                                      <td>
                                          @if (config('app.locale') != 'vi')
-                                             {{ $sp->sp_en }}
+                                             {{ $sp->unit }}
                                          @else
                                              {{ $sp->sp_vi }}
                                          @endif
@@ -152,7 +152,7 @@
                                      onkeyup="ChangeToSlug();" />
 
                                  <label style="font-weight: bold; color: #000"> Đơn vị tính</label>
-                                 <input type="text" id="sp_en" name="sp_en" class="form-control" />
+                                 <input type="text" id="unit" name="unit" class="form-control" />
                                  <label style="font-weight: bold; color: #000">Slug</label>
                                  <input type="text" id="slug" name="slug" class="form-control" />
                              </div>
@@ -303,7 +303,7 @@
                                  $('.modal-title').text('Edit Product');
                                  $('#id_hidden').val(id);
                                  $('#sp_vi').val(response.postshow.sp_vi);
-                         
+
                                  $('#slug').val(response.postshow.product_slug);
                                  CKupdate();
                                  $('#description_vi').text(response.postshow.description_vi);

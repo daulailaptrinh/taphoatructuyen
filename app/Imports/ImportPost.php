@@ -28,7 +28,7 @@ class ImportPost implements ToModel, WithHeadingRow, WithValidation, SkipsOnFail
     {
         return new Post([
             'sp_vi' => $row[0] ?? $row['sp_vi'],
-            'sp_en' => $row[1] ?? $row['sp_en'],
+            'unit' => $row[1] ?? $row['unit'],
             'description_vi' => $row[2] ?? $row['description_vi'],
             'product_slug' => $row[4] ?? $row['product_slug'],
         ]);
@@ -38,7 +38,7 @@ class ImportPost implements ToModel, WithHeadingRow, WithValidation, SkipsOnFail
     {
         return [
             '*.sp_vi' => ['required'],
-            '*.sp_en' => ['required'],
+            '*.unit' => ['required'],
             '*.description_vi' => ['required'],
             '*.product_slug' => ['required'],
         ];
@@ -49,7 +49,7 @@ class ImportPost implements ToModel, WithHeadingRow, WithValidation, SkipsOnFail
         if(Session::get('locale') == 'vi' || Session::get('locale') == null){
             return [
                 '*.sp_vi.required' => 'Vui lòng không để trống !',
-                '*.sp_en.required' => 'Vui lòng không để trống !',
+                '*.unit.required' => 'Vui lòng không để trống !',
                 '*.description_vi.required' => 'Vui lòng không để trống !',
                 '*.product_slug.required' => 'Vui lòng không để trống !',
 

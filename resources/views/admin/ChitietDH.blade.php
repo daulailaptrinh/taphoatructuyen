@@ -56,7 +56,7 @@
                       <th scope="row">{{$key++}}</th>
                       <td>
                         @if(config('app.locale') != 'vi')
-                            {{$bd->sp_en}}
+                            {{$bd->unit}}
                         @else
                             {{$bd->sp_vi}}
                         @endif
@@ -95,7 +95,7 @@
                       <th scope="row">{{$key++}}</th>
                       <td>
                         @if(config('app.locale') != 'vi')
-                            {{$bd->sp_en}}
+                            {{$bd->unit}}
                         @else
                             {{$bd->sp_vi}}
                         @endif

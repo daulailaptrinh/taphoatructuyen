@@ -17,8 +17,8 @@ class CreatePostsTable extends Migration
             $table->id();
 
             $table->string('sp_vi');
-            $table->string('sp_en');
-            
+            $table->string('unit');
+
             $table->timestamps();
         });
     }

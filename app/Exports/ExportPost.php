@@ -19,6 +19,6 @@ class ExportPost implements FromCollection, WithHeadings, ShouldAutoSize
         return Post::all();
     }
     public function headings() :array {
-    	return ["STTNoImport", "sp_vi", "sp_en", "description_vi", "product_slug"];
+    	return ["STTNoImport", "sp_vi", "unit", "description_vi", "product_slug"];
     }
 }

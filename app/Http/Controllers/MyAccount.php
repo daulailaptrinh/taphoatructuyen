@@ -70,7 +70,7 @@ class MyAccount extends Controller
      */
     public function show($id)
     {
-        $detail = BillDetail::select('bill_detail.*', 'a.id as pro_id', 'p.sp_vi', 'p.sp_en')
+        $detail = BillDetail::select('bill_detail.*', 'a.id as pro_id', 'p.sp_vi', 'p.unit')
             ->join('products as a', 'a.id', 'bill_detail.id_product')
             ->join('post as p', 'p.id_post', 'bill_detail.id_post_bill_detail')
             ->where('order_code', $id)

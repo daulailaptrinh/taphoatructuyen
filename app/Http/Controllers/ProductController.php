@@ -60,15 +60,15 @@ class ProductController extends Controller
             $validator = Validator::make($request->all(),
                 [
                     'sp_vi' => 'required',
-                    'sp_en' => 'required',
+                    'unit' => 'required',
                     'unit_price' => 'required',
                     'promotion_price' => 'required',
                     'image_file' => 'mimes:jpg,jpeg,png,gif|max:4096',
 
                 ],
                 [
-                    'sp_vi.required' => 'Vui lòng nhập tên Vi',
-                    'sp_en.required' => 'Vui lòng nhập tên En',
+                    'sp_vi.required' => 'Vui lòng nhập tên',
+                    'unit.required' => 'Vui nhập đơn vị',
                     'unit_price.required' => 'Vui lòng nhập số tiền',
                     'promotion_price.required' => 'Vui lòng nhập số tiền khuyến mãi',
                     'image_file.mimes' => 'Chỉ chấp nhận hình thẻ với đuôi .jpg .jpeg .png .gif',
@@ -78,7 +78,7 @@ class ProductController extends Controller
             $validator = Validator::make($request->all(),
                 [
                     'sp_vi' => 'required',
-                    'sp_en' => 'required',
+                    'unit' => 'required',
                     'unit_price' => 'required',
                     'promotion_price' => 'required',
                     'image_file' => 'mimes:jpg,jpeg,png,gif|max:4096',
@@ -95,7 +95,7 @@ class ProductController extends Controller
             $up_nn = new Post();
 
             $up_nn->sp_vi = $request->sp_vi;
-            $up_nn->sp_en = $request->sp_en;
+            $up_nn->unit = $request->unit;
             $up_nn->description_vi = $request->description_vi;
             $up_nn->product_slug = $request->slug;
             $up_nn->save();
@@ -149,15 +149,15 @@ class ProductController extends Controller
             $validator = Validator::make($request->all(),
                 [
                     'sp_vi' => 'required',
-                    'sp_en' => 'required',
+                    'unit' => 'required',
                     'unit_price' => 'required',
                     'promotion_price' => 'required',
                     'image' => 'mimes:jpg,jpeg,png,gif|max:4096',
 
                 ],
                 [
-                    'sp_vi.required' => 'Vui lòng nhập tên Vi',
-                    'sp_en.required' => 'Vui lòng nhập tên En',
+                    'sp_vi.required' => 'Vui lòng nhập tên ',
+                    'unit.required' => 'Vui lòng nhậpđơn vị',
                     'unit_price.required' => 'Vui lòng nhập số tiền',
                     'promotion_price.required' => 'Vui lòng nhập số tiền khuyến mãi',
                     'image.mimes' => 'Chỉ chấp nhận hình thẻ với đuôi .jpg .jpeg .png .gif',
@@ -167,7 +167,7 @@ class ProductController extends Controller
             $validator = Validator::make($request->all(),
                 [
                     'sp_vi' => 'required',
-                    'sp_en' => 'required',
+                    'unit' => 'required',
                     'unit_price' => 'required',
                     'promotion_price' => 'required',
                     'image' => 'mimes:jpg,jpeg,png,gif|max:4096',
@@ -184,7 +184,7 @@ class ProductController extends Controller
             $up_nn = Post::where('id_post', $sp_update->id_post)->first();
 
             $up_nn->sp_vi = $request->sp_vi;
-            $up_nn->sp_en = $request->sp_en;
+            $up_nn->unit = $request->unit;
             $up_nn->description_vi = $request->description_vi;
             $up_nn->product_slug = $request->slug;
             $up_nn->save();

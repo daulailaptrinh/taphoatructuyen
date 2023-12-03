@@ -512,7 +512,7 @@ class Usercontroller extends Controller
             ->where('unit_price', 'like', '%' . $req->search . '%')
         // ->orWhere('name_type',$req->key)
             ->orWhere('sp_vi', $req->search)
-            ->orWhere('sp_en', $req->search)
+            ->orWhere('unit', $req->search)
             ->paginate(6);
         // $url_canonical = $req->url();
         $image_og = $req->url();

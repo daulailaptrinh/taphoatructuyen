@@ -87,7 +87,7 @@ class OrderController extends Controller
         if (Auth::check()) {
 
             $billdetaill = DB::select("SELECT bt.id_bill_detail, bt.id_bill, bt.id_product, bt.id_post_bill_detail, bt.order_code, bt.quantity,
-        bt.unit_price,p.image,p.date_sale, p.product_quantity ,p.id_post, post.sp_vi as sp_vi,  post.sp_en as sp_en
+        bt.unit_price,p.image,p.date_sale, p.product_quantity ,p.id_post, post.sp_vi as sp_vi,  post.unit as unit
         FROM bill_detail bt, products p
         INNER JOIN post ON p.id_post = post.id_post
          WHERE bt.id_product=p.id AND id_bill=$id ");

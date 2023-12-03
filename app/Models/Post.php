@@ -11,7 +11,7 @@ class Post extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'sp_vi', 'sp_en', 'product_slug', 'description_vi', 'description_en',
+        'sp_vi', 'unit', 'product_slug', 'description_vi', 'description_en',
     ];
     // public function product(){
     //     return $this->hasMany('App\Product','id_post', 'id_post');

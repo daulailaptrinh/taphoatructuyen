@@ -92,7 +92,7 @@
                        <tr>
                             <td>{{$key+=1}}</td>
                             <td>{{$nnnn->sp_vi}}</td>
-                            <td>{{$nnnn->sp_en}}</td>
+                            <td>{{$nnnn->unit}}</td>
                             <td class="hiden-text"><p>{!! $nnnn->$multi_description !!}</p></td>
                             <td>{{$nnnn->product_slug}}</td>
 
@@ -154,7 +154,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label style="font-weight: bold; color: #000" >Name Product_en</label>
-                                                    <input type="text" id="sp_en_{{$nnnn->id_post}}" name="sp_en" class="form-control"  value="{{$nnnn->sp_en}}"/>
+                                                    <input type="text" id="unit_{{$nnnn->id_post}}" name="unit" class="form-control"  value="{{$nnnn->unit}}"/>
                                                 </div>
                                                 <div class="form-group">
                                                     <label style="font-weight: bold; color: #000" >Url</label>
