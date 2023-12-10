@@ -4,7 +4,7 @@
 <head>
     <title>{{ trans('home.home') }} || VinChoice</title>
     @include('FrontEnd.Style.Link')
-   <!--Start of Fchat.vn--><script type="text/javascript" src="https://cdn.fchat.vn/assets/embed/webchat.js?id=65557ea53fa5a016407ef90d" async="async"></script><!--End of Fchat.vn-->
+ <!--Start of Fchat.vn--><script type="text/javascript" src="https://cdn.fchat.vn/assets/embed/webchat.js?id=65557ea53fa5a016407ef90d" async="async"></script><!--End of Fchat.vn-->
 </head>
 
 <body>

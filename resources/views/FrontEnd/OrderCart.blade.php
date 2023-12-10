@@ -211,7 +211,7 @@ Order Cart
 	                                </tr>
 	                                @else
 	                                <tr class="cart-subtotal">
-	                                    <th>Subtotal</th>
+	                                    <th>Tổng phụ</th>
 	                                    <td>
 	                                    	<span class="amount">
 	                                    		@if(Auth::check() && Session('cart'))
@@ -223,7 +223,7 @@ Order Cart
 	                                    </td>
 	                                </tr>
 	                                <tr class="cart-subtotal">
-	                                    <th>Cart Total</th>
+	                                    <th>Tổng thanh toán</th>
 	                                    <td>
 	                                    	<span class="amount">
 	                                    		@foreach(Session::get('coupon') as $key => $coun)

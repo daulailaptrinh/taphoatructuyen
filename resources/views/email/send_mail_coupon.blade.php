@@ -59,7 +59,7 @@
                         {{$coupon_array['coupon_send_new']['coupon_number']}} %
                         @else
                         {{number_format($coupon_array['coupon_send_new']['coupon_number'],0,',','.')}} VNĐ
-                        @endif cho tổng đơn hàng trên 300 VND</i></b></h2>
+                        @endif cho tổng đơn hàng trên 200 VND</i></b></h2>
             <p>Quý khách đã từng mua hàng tại shop <a href="http://127.0.0.1:8000/" target="_blank">VinChoice.vn</a> nếu đã có tài khoản xin vui lòng <a href="http://127.0.0.1:8000/" target="_blank"
                     style="color: red">Đăng Nhập</a> vào tài khoản  để mua hàng và nhập mã code phía dưới để được giảm giá mua hàng, xin cảm ơn quý khách. Chúc quý khách thật nhiều sức khỏe và bình an trong cuộc sống. </p>
         </div>

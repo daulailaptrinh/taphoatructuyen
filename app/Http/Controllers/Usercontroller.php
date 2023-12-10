@@ -695,6 +695,7 @@ class Usercontroller extends Controller
         $note_order = $req->notes;
         $code_order = $vnp_TxnRef;
         $BankCode_order = $vnp_BankCode;
+        $user_id = auth()->id();
 
         $count_order[] = array(
             'name_order' => $name_order,
@@ -705,6 +706,7 @@ class Usercontroller extends Controller
             'note_order' => $note_order,
             'code_order' => $code_order,
             'BankCode_order' => $BankCode_order,
+            'user_id' => $user_id,
         );
         Session::put('order_customer', $count_order);
 
@@ -780,6 +782,7 @@ class Usercontroller extends Controller
 
                 $bill = new Bill();
                 $bill->id_customer = $customer->id;
+                $bill->user_id = $value1['user_id'];
                 $bill->date_order = date('Y-m-d');
                 if (Session::get('coupon')) {
                     foreach (Session::get('coupon') as $key => $coun) {
@@ -797,7 +800,7 @@ class Usercontroller extends Controller
                     $bill->total = $cart->totalPrice;
                 }
                 $bill->payment = $req->vnp_CardType;
-                $bill->status_bill = $req = 0;
+                $bill->status_bill = 0;
                 $bill->order_code = $value1['code_order'];
                 $bill->save();
             }
